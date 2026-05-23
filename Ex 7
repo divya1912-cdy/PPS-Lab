@@ -1,0 +1,12 @@
+n=int(input())
+for i in range(n,0,-1):
+	print("*"*i)
+
+a,b,c=input().split()
+digits=[a,b,c]
+
+for i in range(3):
+	for j in range(3):
+		for k in range(3):
+			if i!=j and j!=k and i!=k:
+				print(digits[i]+digits[j]+digits[k])# Type Content here...
