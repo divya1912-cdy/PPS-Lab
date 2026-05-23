@@ -1,0 +1,28 @@
+# Input dimension
+n = int(input("dimension: "))
+
+# Input first matrix
+print("first matrix:")
+matrix1 = []
+for i in range(n):
+    matrix1.append(list(map(int, input().split())))
+
+# Input second matrix
+print("second matrix:")
+matrix2 = []
+for i in range(n):
+    matrix2.append(list(map(int, input().split())))
+
+# Initialize result matrix with zeros
+result = [[0] * n for _ in range(n)]
+
+# Multiply matrices
+for i in range(n):
+    for j in range(n):
+        for k in range(n):
+            result[i][j] += matrix1[i][k] * matrix2[k][j]
+
+# Output result
+print("Resultant Matrix:")
+for row in result:
+    print(*row)# Type Content here...
