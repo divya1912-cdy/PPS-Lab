@@ -1,0 +1,36 @@
+year = int(input())
+
+if(year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+	print("Leap year")
+else:
+	print("Not a leap year")
+
+
+  # Write your code here...
+# Read marks of four subjects
+# Read input marks
+marks = list(map(int, input().split()))
+
+# Calculate total marks
+total = sum(marks)
+
+# Calculate aggregate percentage
+aggregate = (total / 400) * 100
+
+# Determine grade
+if aggregate >= 75:
+	grade = "Distinction"
+elif aggregate >= 60:
+	grade = "First Division"
+elif aggregate >= 50:
+	grade = "Second Division"
+elif aggregate >= 40:
+	grade = "Third Division"
+else:
+	grade = "Fail"
+
+# Output results
+print(total)
+print(f"{aggregate:.2f}")
+print(grade)
+
